@@ -1,0 +1,349 @@
+COMMAND		PID		USER	FD			TYPE		NODE			NAME
+"/proc/1/fd/0" rw-w-rw- systemd		1		root	NOFD_lsof			CHR		5			/dev/null 
+"/proc/1/fd/1" rw-w-rw- systemd		1		root	NOFD_lsof			CHR		5			/dev/null 
+"/proc/1/fd/2" rw-w-rw- systemd		1		root	NOFD_lsof			CHR		5			/dev/null 
+"/proc/1/fd/3" rw---r-- systemd		1		root	NOFD_lsof			CHR		11			/dev/kmsg 
+"/proc/1/fd/4" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		11			anon_inode:[eventpoll] 
+"/proc/1/fd/5" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		11			anon_inode:[signalfd] 
+"/proc/1/fd/6" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		11			anon_inode:inotify 
+"/proc/1/fd/7" r-x-xr-x systemd		1		root	NOFD_lsof			DIR		1			/sys/fs/cgroup/unified 
+"/proc/1/fd/8" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		1			anon_inode:[timerfd] 
+"/proc/1/fd/9" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		1			anon_inode:[eventpoll] 
+"/proc/1/fd/10" r----r-- systemd		1		root	NOFD_lsof			REG		15903			/proc/1/mountinfo 
+"/proc/1/fd/11" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		15903			anon_inode:inotify 
+"/proc/1/fd/12" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		15903			anon_inode:inotify 
+"/proc/1/fd/13" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		15903			anon_inode:inotify 
+"/proc/1/fd/14" r----r-- systemd		1		root	NOFD_lsof			REG		4026532089			/proc/swaps 
+"/proc/1/fd/15" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		4026532089			socket:[15904] 
+"/proc/1/fd/16" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		4026532089			anon_inode:inotify 
+"/proc/1/fd/17" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		4026532089			anon_inode:inotify 
+"/proc/1/fd/18" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		4026532089			anon_inode:inotify 
+"/proc/1/fd/19" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		4026532089			socket:[15908] 
+"/proc/1/fd/20" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		4026532089			socket:[15910] 
+"/proc/1/fd/21" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		4026532089			socket:[14627739] 
+"/proc/1/fd/23" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		4026532089			socket:[14729979] 
+"/proc/1/fd/24" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		4026532089			socket:[14729980] 
+"/proc/1/fd/25" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		4026532089			socket:[15905] 
+"/proc/1/fd/26" rw---r-- systemd		1		root	NOFD_lsof			CHR		441			/dev/autofs 
+"/proc/1/fd/27" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		441			socket:[15906] 
+"/proc/1/fd/28" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		441			anon_inode:[timerfd] 
+"/proc/1/fd/29" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		441			socket:[15907] 
+"/proc/1/fd/31" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		441			anon_inode:bpf-prog 
+"/proc/1/fd/32" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		441			anon_inode:bpf-prog 
+"/proc/1/fd/33" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		441			anon_inode:bpf-prog 
+"/proc/1/fd/34" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		441			anon_inode:bpf-prog 
+"/proc/1/fd/35" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		441			anon_inode:bpf-prog 
+"/proc/1/fd/36" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		441			anon_inode:bpf-prog 
+"/proc/1/fd/37" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		441			anon_inode:bpf-prog 
+"/proc/1/fd/38" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		441			anon_inode:bpf-prog 
+"/proc/1/fd/40" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		441			socket:[15977] 
+"/proc/1/fd/41" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		441			socket:[20539] 
+"/proc/1/fd/42" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		441			socket:[41174] 
+"/proc/1/fd/43" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		441			socket:[41175] 
+"/proc/1/fd/44" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		441			socket:[15931] 
+"/proc/1/fd/45" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		441			socket:[15933] 
+"/proc/1/fd/46" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		441			socket:[15937] 
+"/proc/1/fd/47" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		441			socket:[32885] 
+"/proc/1/fd/48" rwxwxrwx systemd		1		root	NOFD_lsof			PIPE		441			pipe:[15917] 
+"/proc/1/fd/49" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		441			socket:[15919] 
+"/proc/1/fd/50" rw------ systemd		1		root	NOFD_lsof			FIFO		376			/run/initctl 
+"/proc/1/fd/51" rwxwxrwx systemd		1		root	NOFD_lsof			unknown_UNEXISTED		376			anon_inode:[timerfd] 
+"/proc/1/fd/52" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[15921] 
+"/proc/1/fd/53" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[32899] 
+"/proc/1/fd/54" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[32891] 
+"/proc/1/fd/55" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[32887] 
+"/proc/1/fd/56" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[15928] 
+"/proc/1/fd/57" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[14315362] 
+"/proc/1/fd/58" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[15935] 
+"/proc/1/fd/59" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[15929] 
+"/proc/1/fd/60" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[32929] 
+"/proc/1/fd/61" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[27392] 
+"/proc/1/fd/62" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[27433] 
+"/proc/1/fd/63" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[27434] 
+"/proc/1/fd/64" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[27586] 
+"/proc/1/fd/65" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[27589] 
+"/proc/1/fd/66" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[27590] 
+"/proc/1/fd/67" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[27591] 
+"/proc/1/fd/68" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[27593] 
+"/proc/1/fd/69" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[27594] 
+"/proc/1/fd/70" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[32210] 
+"/proc/1/fd/71" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[27597] 
+"/proc/1/fd/72" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[33836] 
+"/proc/1/fd/73" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[33837] 
+"/proc/1/fd/74" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[33838] 
+"/proc/1/fd/75" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[33839] 
+"/proc/1/fd/76" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[29633] 
+"/proc/1/fd/77" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[34001] 
+"/proc/1/fd/78" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[35112] 
+"/proc/1/fd/79" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[32700] 
+"/proc/1/fd/80" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[35208] 
+"/proc/1/fd/81" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[36059] 
+"/proc/1/fd/82" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[36072] 
+"/proc/1/fd/83" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[33590] 
+"/proc/1/fd/84" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[38918] 
+"/proc/1/fd/85" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[36668] 
+"/proc/1/fd/86" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[42050] 
+"/proc/1/fd/87" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[38579] 
+"/proc/1/fd/88" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[77309] 
+"/proc/1/fd/89" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[74377] 
+"/proc/1/fd/90" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[74379] 
+"/proc/1/fd/91" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[74380] 
+"/proc/1/fd/92" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[74381] 
+"/proc/1/fd/93" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[74382] 
+"/proc/1/fd/94" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[74383] 
+"/proc/1/fd/95" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[74384] 
+"/proc/1/fd/96" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[74385] 
+"/proc/1/fd/97" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[74386] 
+"/proc/1/fd/98" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[74387] 
+"/proc/1/fd/99" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[74388] 
+"/proc/1/fd/100" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[74389] 
+"/proc/1/fd/101" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[74390] 
+"/proc/1/fd/102" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[80750] 
+"/proc/1/fd/103" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[80765] 
+"/proc/1/fd/104" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[83260] 
+"/proc/1/fd/105" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[80857] 
+"/proc/1/fd/106" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[83454] 
+"/proc/1/fd/107" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[82610] 
+"/proc/1/fd/108" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[82611] 
+"/proc/1/fd/109" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[86134] 
+"/proc/1/fd/110" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[84311] 
+"/proc/1/fd/111" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[84312] 
+"/proc/1/fd/112" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[85505] 
+"/proc/1/fd/113" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[82637] 
+"/proc/1/fd/114" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[82638] 
+"/proc/1/fd/115" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[86148] 
+"/proc/1/fd/116" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[86149] 
+"/proc/1/fd/117" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[84370] 
+"/proc/1/fd/118" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[86157] 
+"/proc/1/fd/119" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[84417] 
+"/proc/1/fd/120" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[86201] 
+"/proc/1/fd/121" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[82656] 
+"/proc/1/fd/122" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[84463] 
+"/proc/1/fd/123" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[82659] 
+"/proc/1/fd/124" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[83868] 
+"/proc/1/fd/125" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[81744] 
+"/proc/1/fd/126" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[86288] 
+"/proc/1/fd/127" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[86289] 
+"/proc/1/fd/128" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[86290] 
+"/proc/1/fd/129" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[86291] 
+"/proc/1/fd/130" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[83955] 
+"/proc/1/fd/131" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[86335] 
+"/proc/1/fd/132" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[81917] 
+"/proc/1/fd/133" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[81918] 
+"/proc/1/fd/134" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[81919] 
+"/proc/1/fd/135" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[85599] 
+"/proc/1/fd/136" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[85600] 
+"/proc/1/fd/137" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[84574] 
+"/proc/1/fd/138" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[84575] 
+"/proc/1/fd/139" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[88088] 
+"/proc/1/fd/140" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[88089] 
+"/proc/1/fd/141" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[86436] 
+"/proc/1/fd/142" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[86437] 
+"/proc/1/fd/144" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[87096] 
+"/proc/1/fd/145" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[87097] 
+"/proc/1/fd/146" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[87103] 
+"/proc/1/fd/147" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[82774] 
+"/proc/1/fd/148" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[86777] 
+"/proc/1/fd/149" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[91831] 
+"/proc/1/fd/150" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[14319634] 
+"/proc/1/fd/151" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[94708] 
+"/proc/1/fd/152" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[98946] 
+"/proc/1/fd/153" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[101985] 
+"/proc/1/fd/154" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[101986] 
+"/proc/1/fd/155" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[14319636] 
+"/proc/1/fd/156" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[2495817] 
+"/proc/1/fd/271" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[32895] 
+"/proc/1/fd/272" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		376			socket:[32897] 
+"/proc/1/fd/273" rw-w-r-- systemd		1		root	NOFD_lsof			CHR		3			/dev/rfkill 
+"/proc/1/fd/274" rwxwxrwx systemd		1		root	NOFD_lsof			SOCK		3			socket:[32893] 
+systemd		1		root	mem			REG		1051813			/usr/lib/systemd/systemd 
+systemd		1		root	mem			REG		1051813			/usr/lib/systemd/systemd 
+systemd		1		root	mem			REG		1051813			/usr/lib/systemd/systemd 
+systemd		1		root	mem			REG		1051813			/usr/lib/systemd/systemd 
+systemd		1		root	mem			REG		1051813			/usr/lib/systemd/systemd 
+systemd		1		root	mem			REG		1052507			/usr/lib/x86_64-linux-gnu/libm-2.31.so 
+systemd		1		root	mem			REG		1052507			/usr/lib/x86_64-linux-gnu/libm-2.31.so 
+systemd		1		root	mem			REG		1052507			/usr/lib/x86_64-linux-gnu/libm-2.31.so 
+systemd		1		root	mem			REG		1052507			/usr/lib/x86_64-linux-gnu/libm-2.31.so 
+systemd		1		root	mem			REG		1052507			/usr/lib/x86_64-linux-gnu/libm-2.31.so 
+systemd		1		root	mem			REG		1049455			/usr/lib/x86_64-linux-gnu/libudev.so.1.6.17 
+systemd		1		root	mem			REG		1049455			/usr/lib/x86_64-linux-gnu/libudev.so.1.6.17 
+systemd		1		root	mem			REG		1049455			/usr/lib/x86_64-linux-gnu/libudev.so.1.6.17 
+systemd		1		root	mem			REG		1049455			/usr/lib/x86_64-linux-gnu/libudev.so.1.6.17 
+systemd		1		root	mem			REG		1049455			/usr/lib/x86_64-linux-gnu/libudev.so.1.6.17 
+systemd		1		root	mem			REG		1057143			/usr/lib/x86_64-linux-gnu/libunistring.so.2.1.0 
+systemd		1		root	mem			REG		1057143			/usr/lib/x86_64-linux-gnu/libunistring.so.2.1.0 
+systemd		1		root	mem			REG		1057143			/usr/lib/x86_64-linux-gnu/libunistring.so.2.1.0 
+systemd		1		root	mem			REG		1057143			/usr/lib/x86_64-linux-gnu/libunistring.so.2.1.0 
+systemd		1		root	mem			REG		1057143			/usr/lib/x86_64-linux-gnu/libunistring.so.2.1.0 
+systemd		1		root	mem			REG		1057143			/usr/lib/x86_64-linux-gnu/libunistring.so.2.1.0 
+systemd		1		root	mem			REG		1056366			/usr/lib/x86_64-linux-gnu/libgpg-error.so.0.28.0 
+systemd		1		root	mem			REG		1056366			/usr/lib/x86_64-linux-gnu/libgpg-error.so.0.28.0 
+systemd		1		root	mem			REG		1056366			/usr/lib/x86_64-linux-gnu/libgpg-error.so.0.28.0 
+systemd		1		root	mem			REG		1056366			/usr/lib/x86_64-linux-gnu/libgpg-error.so.0.28.0 
+systemd		1		root	mem			REG		1056366			/usr/lib/x86_64-linux-gnu/libgpg-error.so.0.28.0 
+systemd		1		root	mem			REG		1056579			/usr/lib/x86_64-linux-gnu/libjson-c.so.4.0.0 
+systemd		1		root	mem			REG		1056579			/usr/lib/x86_64-linux-gnu/libjson-c.so.4.0.0 
+systemd		1		root	mem			REG		1056579			/usr/lib/x86_64-linux-gnu/libjson-c.so.4.0.0 
+systemd		1		root	mem			REG		1056579			/usr/lib/x86_64-linux-gnu/libjson-c.so.4.0.0 
+systemd		1		root	mem			REG		1056579			/usr/lib/x86_64-linux-gnu/libjson-c.so.4.0.0 
+systemd		1		root	mem			REG		1056579			/usr/lib/x86_64-linux-gnu/libjson-c.so.4.0.0 
+systemd		1		root	mem			REG		1055897			/usr/lib/x86_64-linux-gnu/libargon2.so.1 
+systemd		1		root	mem			REG		1055897			/usr/lib/x86_64-linux-gnu/libargon2.so.1 
+systemd		1		root	mem			REG		1055897			/usr/lib/x86_64-linux-gnu/libargon2.so.1 
+systemd		1		root	mem			REG		1055897			/usr/lib/x86_64-linux-gnu/libargon2.so.1 
+systemd		1		root	mem			REG		1055897			/usr/lib/x86_64-linux-gnu/libargon2.so.1 
+systemd		1		root	mem			REG		1056122			/usr/lib/x86_64-linux-gnu/libdevmapper.so.1.02.1 
+systemd		1		root	mem			REG		1056122			/usr/lib/x86_64-linux-gnu/libdevmapper.so.1.02.1 
+systemd		1		root	mem			REG		1056122			/usr/lib/x86_64-linux-gnu/libdevmapper.so.1.02.1 
+systemd		1		root	mem			REG		1056122			/usr/lib/x86_64-linux-gnu/libdevmapper.so.1.02.1 
+systemd		1		root	mem			REG		1056122			/usr/lib/x86_64-linux-gnu/libdevmapper.so.1.02.1 
+systemd		1		root	mem			REG		1048992			/usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0 
+systemd		1		root	mem			REG		1048992			/usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0 
+systemd		1		root	mem			REG		1048992			/usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0 
+systemd		1		root	mem			REG		1048992			/usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0 
+systemd		1		root	mem			REG		1048992			/usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0 
+systemd		1		root	mem			REG		1048619			/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1 
+systemd		1		root	mem			REG		1048619			/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1 
+systemd		1		root	mem			REG		1048619			/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1 
+systemd		1		root	mem			REG		1048619			/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1 
+systemd		1		root	mem			REG		1048619			/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1 
+systemd		1		root	mem			REG		1056009			/usr/lib/x86_64-linux-gnu/libcap-ng.so.0.0.0 
+systemd		1		root	mem			REG		1056009			/usr/lib/x86_64-linux-gnu/libcap-ng.so.0.0.0 
+systemd		1		root	mem			REG		1056009			/usr/lib/x86_64-linux-gnu/libcap-ng.so.0.0.0 
+systemd		1		root	mem			REG		1056009			/usr/lib/x86_64-linux-gnu/libcap-ng.so.0.0.0 
+systemd		1		root	mem			REG		1056009			/usr/lib/x86_64-linux-gnu/libcap-ng.so.0.0.0 
+systemd		1		root	mem			REG		1052505			/usr/lib/x86_64-linux-gnu/libdl-2.31.so 
+systemd		1		root	mem			REG		1052505			/usr/lib/x86_64-linux-gnu/libdl-2.31.so 
+systemd		1		root	mem			REG		1052505			/usr/lib/x86_64-linux-gnu/libdl-2.31.so 
+systemd		1		root	mem			REG		1052505			/usr/lib/x86_64-linux-gnu/libdl-2.31.so 
+systemd		1		root	mem			REG		1052505			/usr/lib/x86_64-linux-gnu/libdl-2.31.so 
+systemd		1		root	mem			REG		1056838			/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.9.0 
+systemd		1		root	mem			REG		1056838			/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.9.0 
+systemd		1		root	mem			REG		1056838			/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.9.0 
+systemd		1		root	mem			REG		1056838			/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.9.0 
+systemd		1		root	mem			REG		1056838			/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.9.0 
+systemd		1		root	mem			REG		1052522			/usr/lib/x86_64-linux-gnu/libpthread-2.31.so 
+systemd		1		root	mem			REG		1052522			/usr/lib/x86_64-linux-gnu/libpthread-2.31.so 
+systemd		1		root	mem			REG		1052522			/usr/lib/x86_64-linux-gnu/libpthread-2.31.so 
+systemd		1		root	mem			REG		1052522			/usr/lib/x86_64-linux-gnu/libpthread-2.31.so 
+systemd		1		root	mem			REG		1052522			/usr/lib/x86_64-linux-gnu/libpthread-2.31.so 
+systemd		1		root	mem			REG		1054618			/usr/lib/x86_64-linux-gnu/liblzma.so.5.2.4 
+systemd		1		root	mem			REG		1054618			/usr/lib/x86_64-linux-gnu/liblzma.so.5.2.4 
+systemd		1		root	mem			REG		1054618			/usr/lib/x86_64-linux-gnu/liblzma.so.5.2.4 
+systemd		1		root	mem			REG		1054618			/usr/lib/x86_64-linux-gnu/liblzma.so.5.2.4 
+systemd		1		root	mem			REG		1054618			/usr/lib/x86_64-linux-gnu/liblzma.so.5.2.4 
+systemd		1		root	mem			REG		1054618			/usr/lib/x86_64-linux-gnu/liblzma.so.5.2.4 
+systemd		1		root	mem			REG		1049280			/usr/lib/x86_64-linux-gnu/liblz4.so.1.9.2 
+systemd		1		root	mem			REG		1049280			/usr/lib/x86_64-linux-gnu/liblz4.so.1.9.2 
+systemd		1		root	mem			REG		1049280			/usr/lib/x86_64-linux-gnu/liblz4.so.1.9.2 
+systemd		1		root	mem			REG		1049280			/usr/lib/x86_64-linux-gnu/liblz4.so.1.9.2 
+systemd		1		root	mem			REG		1049280			/usr/lib/x86_64-linux-gnu/liblz4.so.1.9.2 
+systemd		1		root	mem			REG		1056547			/usr/lib/x86_64-linux-gnu/libip4tc.so.2.0.0 
+systemd		1		root	mem			REG		1056547			/usr/lib/x86_64-linux-gnu/libip4tc.so.2.0.0 
+systemd		1		root	mem			REG		1056547			/usr/lib/x86_64-linux-gnu/libip4tc.so.2.0.0 
+systemd		1		root	mem			REG		1056547			/usr/lib/x86_64-linux-gnu/libip4tc.so.2.0.0 
+systemd		1		root	mem			REG		1056547			/usr/lib/x86_64-linux-gnu/libip4tc.so.2.0.0 
+systemd		1		root	mem			REG		1056534			/usr/lib/x86_64-linux-gnu/libidn2.so.0.3.6 
+systemd		1		root	mem			REG		1056534			/usr/lib/x86_64-linux-gnu/libidn2.so.0.3.6 
+systemd		1		root	mem			REG		1056534			/usr/lib/x86_64-linux-gnu/libidn2.so.0.3.6 
+systemd		1		root	mem			REG		1056534			/usr/lib/x86_64-linux-gnu/libidn2.so.0.3.6 
+systemd		1		root	mem			REG		1056534			/usr/lib/x86_64-linux-gnu/libidn2.so.0.3.6 
+systemd		1		root	mem			REG		1056534			/usr/lib/x86_64-linux-gnu/libidn2.so.0.3.6 
+systemd		1		root	mem			REG		1049405			/usr/lib/x86_64-linux-gnu/libgcrypt.so.20.2.5 
+systemd		1		root	mem			REG		1049405			/usr/lib/x86_64-linux-gnu/libgcrypt.so.20.2.5 
+systemd		1		root	mem			REG		1049405			/usr/lib/x86_64-linux-gnu/libgcrypt.so.20.2.5 
+systemd		1		root	mem			REG		1049405			/usr/lib/x86_64-linux-gnu/libgcrypt.so.20.2.5 
+systemd		1		root	mem			REG		1049405			/usr/lib/x86_64-linux-gnu/libgcrypt.so.20.2.5 
+systemd		1		root	mem			REG		1049863			/usr/lib/x86_64-linux-gnu/libcryptsetup.so.12.5.0 
+systemd		1		root	mem			REG		1049863			/usr/lib/x86_64-linux-gnu/libcryptsetup.so.12.5.0 
+systemd		1		root	mem			REG		1049863			/usr/lib/x86_64-linux-gnu/libcryptsetup.so.12.5.0 
+systemd		1		root	mem			REG		1049863			/usr/lib/x86_64-linux-gnu/libcryptsetup.so.12.5.0 
+systemd		1		root	mem			REG		1049863			/usr/lib/x86_64-linux-gnu/libcryptsetup.so.12.5.0 
+systemd		1		root	mem			REG		1056070			/usr/lib/x86_64-linux-gnu/libcrypt.so.1.1.0 
+systemd		1		root	mem			REG		1056070			/usr/lib/x86_64-linux-gnu/libcrypt.so.1.1.0 
+systemd		1		root	mem			REG		1056070			/usr/lib/x86_64-linux-gnu/libcrypt.so.1.1.0 
+systemd		1		root	mem			REG		1056070			/usr/lib/x86_64-linux-gnu/libcrypt.so.1.1.0 
+systemd		1		root	mem			REG		1056070			/usr/lib/x86_64-linux-gnu/libcrypt.so.1.1.0 
+systemd		1		root	mem			REG		1056011			/usr/lib/x86_64-linux-gnu/libcap.so.2.32 
+systemd		1		root	mem			REG		1056011			/usr/lib/x86_64-linux-gnu/libcap.so.2.32 
+systemd		1		root	mem			REG		1056011			/usr/lib/x86_64-linux-gnu/libcap.so.2.32 
+systemd		1		root	mem			REG		1056011			/usr/lib/x86_64-linux-gnu/libcap.so.2.32 
+systemd		1		root	mem			REG		1056011			/usr/lib/x86_64-linux-gnu/libcap.so.2.32 
+systemd		1		root	mem			REG		1056011			/usr/lib/x86_64-linux-gnu/libcap.so.2.32 
+systemd		1		root	mem			REG		1048742			/usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0 
+systemd		1		root	mem			REG		1048742			/usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0 
+systemd		1		root	mem			REG		1048742			/usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0 
+systemd		1		root	mem			REG		1048742			/usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0 
+systemd		1		root	mem			REG		1048742			/usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0 
+systemd		1		root	mem			REG		1048742			/usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0 
+systemd		1		root	mem			REG		1055876			/usr/lib/x86_64-linux-gnu/libacl.so.1.1.2253 
+systemd		1		root	mem			REG		1055876			/usr/lib/x86_64-linux-gnu/libacl.so.1.1.2253 
+systemd		1		root	mem			REG		1055876			/usr/lib/x86_64-linux-gnu/libacl.so.1.1.2253 
+systemd		1		root	mem			REG		1055876			/usr/lib/x86_64-linux-gnu/libacl.so.1.1.2253 
+systemd		1		root	mem			REG		1055876			/usr/lib/x86_64-linux-gnu/libacl.so.1.1.2253 
+systemd		1		root	mem			REG		1055886			/usr/lib/x86_64-linux-gnu/libapparmor.so.1.6.1 
+systemd		1		root	mem			REG		1055886			/usr/lib/x86_64-linux-gnu/libapparmor.so.1.6.1 
+systemd		1		root	mem			REG		1055886			/usr/lib/x86_64-linux-gnu/libapparmor.so.1.6.1 
+systemd		1		root	mem			REG		1055886			/usr/lib/x86_64-linux-gnu/libapparmor.so.1.6.1 
+systemd		1		root	mem			REG		1055886			/usr/lib/x86_64-linux-gnu/libapparmor.so.1.6.1 
+systemd		1		root	mem			REG		1056587			/usr/lib/x86_64-linux-gnu/libkmod.so.2.3.5 
+systemd		1		root	mem			REG		1056587			/usr/lib/x86_64-linux-gnu/libkmod.so.2.3.5 
+systemd		1		root	mem			REG		1056587			/usr/lib/x86_64-linux-gnu/libkmod.so.2.3.5 
+systemd		1		root	mem			REG		1056587			/usr/lib/x86_64-linux-gnu/libkmod.so.2.3.5 
+systemd		1		root	mem			REG		1056587			/usr/lib/x86_64-linux-gnu/libkmod.so.2.3.5 
+systemd		1		root	mem			REG		1055925			/usr/lib/x86_64-linux-gnu/libaudit.so.1.0.0 
+systemd		1		root	mem			REG		1055925			/usr/lib/x86_64-linux-gnu/libaudit.so.1.0.0 
+systemd		1		root	mem			REG		1055925			/usr/lib/x86_64-linux-gnu/libaudit.so.1.0.0 
+systemd		1		root	mem			REG		1055925			/usr/lib/x86_64-linux-gnu/libaudit.so.1.0.0 
+systemd		1		root	mem			REG		1055925			/usr/lib/x86_64-linux-gnu/libaudit.so.1.0.0 
+systemd		1		root	mem			REG		1055925			/usr/lib/x86_64-linux-gnu/libaudit.so.1.0.0 
+systemd		1		root	mem			REG		1051688			/usr/lib/x86_64-linux-gnu/libpam.so.0.84.2 
+systemd		1		root	mem			REG		1051688			/usr/lib/x86_64-linux-gnu/libpam.so.0.84.2 
+systemd		1		root	mem			REG		1051688			/usr/lib/x86_64-linux-gnu/libpam.so.0.84.2 
+systemd		1		root	mem			REG		1051688			/usr/lib/x86_64-linux-gnu/libpam.so.0.84.2 
+systemd		1		root	mem			REG		1051688			/usr/lib/x86_64-linux-gnu/libpam.so.0.84.2 
+systemd		1		root	mem			REG		1049301			/usr/lib/x86_64-linux-gnu/libmount.so.1.1.0 
+systemd		1		root	mem			REG		1049301			/usr/lib/x86_64-linux-gnu/libmount.so.1.1.0 
+systemd		1		root	mem			REG		1049301			/usr/lib/x86_64-linux-gnu/libmount.so.1.1.0 
+systemd		1		root	mem			REG		1049301			/usr/lib/x86_64-linux-gnu/libmount.so.1.1.0 
+systemd		1		root	mem			REG		1049301			/usr/lib/x86_64-linux-gnu/libmount.so.1.1.0 
+systemd		1		root	mem			REG		1056992			/usr/lib/x86_64-linux-gnu/libselinux.so.1 
+systemd		1		root	mem			REG		1056992			/usr/lib/x86_64-linux-gnu/libselinux.so.1 
+systemd		1		root	mem			REG		1056992			/usr/lib/x86_64-linux-gnu/libselinux.so.1 
+systemd		1		root	mem			REG		1056992			/usr/lib/x86_64-linux-gnu/libselinux.so.1 
+systemd		1		root	mem			REG		1056992			/usr/lib/x86_64-linux-gnu/libselinux.so.1 
+systemd		1		root	mem			REG		1056992			/usr/lib/x86_64-linux-gnu/libselinux.so.1 
+systemd		1		root	mem			REG		1048644			/usr/lib/x86_64-linux-gnu/libseccomp.so.2.5.1 
+systemd		1		root	mem			REG		1048644			/usr/lib/x86_64-linux-gnu/libseccomp.so.2.5.1 
+systemd		1		root	mem			REG		1048644			/usr/lib/x86_64-linux-gnu/libseccomp.so.2.5.1 
+systemd		1		root	mem			REG		1048644			/usr/lib/x86_64-linux-gnu/libseccomp.so.2.5.1 
+systemd		1		root	mem			REG		1048644			/usr/lib/x86_64-linux-gnu/libseccomp.so.2.5.1 
+systemd		1		root	mem			REG		1048644			/usr/lib/x86_64-linux-gnu/libseccomp.so.2.5.1 
+systemd		1		root	mem			REG		1052524			/usr/lib/x86_64-linux-gnu/librt-2.31.so 
+systemd		1		root	mem			REG		1052524			/usr/lib/x86_64-linux-gnu/librt-2.31.so 
+systemd		1		root	mem			REG		1052524			/usr/lib/x86_64-linux-gnu/librt-2.31.so 
+systemd		1		root	mem			REG		1052524			/usr/lib/x86_64-linux-gnu/librt-2.31.so 
+systemd		1		root	mem			REG		1052524			/usr/lib/x86_64-linux-gnu/librt-2.31.so 
+systemd		1		root	mem			REG		1050543			/usr/lib/systemd/libsystemd-shared-245.so 
+systemd		1		root	mem			REG		1050543			/usr/lib/systemd/libsystemd-shared-245.so 
+systemd		1		root	mem			REG		1050543			/usr/lib/systemd/libsystemd-shared-245.so 
+systemd		1		root	mem			REG		1050543			/usr/lib/systemd/libsystemd-shared-245.so 
+systemd		1		root	mem			REG		1050543			/usr/lib/systemd/libsystemd-shared-245.so 
+systemd		1		root	mem			REG		1050543			/usr/lib/systemd/libsystemd-shared-245.so 
+systemd		1		root	mem			REG		1049987			/usr/lib/x86_64-linux-gnu/libc-2.31.so 
+systemd		1		root	mem			REG		1049987			/usr/lib/x86_64-linux-gnu/libc-2.31.so 
+systemd		1		root	mem			REG		1049987			/usr/lib/x86_64-linux-gnu/libc-2.31.so 
+systemd		1		root	mem			REG		1049987			/usr/lib/x86_64-linux-gnu/libc-2.31.so 
+systemd		1		root	mem			REG		1049987			/usr/lib/x86_64-linux-gnu/libc-2.31.so 
+systemd		1		root	mem			REG		1049438			/usr/lib/x86_64-linux-gnu/ld-2.31.so 
+systemd		1		root	mem			REG		1049438			/usr/lib/x86_64-linux-gnu/ld-2.31.so 
+systemd		1		root	mem			REG		1049438			/usr/lib/x86_64-linux-gnu/ld-2.31.so 
+systemd		1		root	mem			REG		1049438			/usr/lib/x86_64-linux-gnu/ld-2.31.so 
+systemd		1		root	mem			REG		1049438			/usr/lib/x86_64-linux-gnu/ld-2.31.so 
+systemd		1		root	cwd_lsof			DIR		2			/ 
+systemd		1		root	rtd_lsof			DIR		2			/ 
+systemd		1		root	txt_lsof			REG		1051813			/usr/lib/systemd/systemd 
+kthreadd		2		root	cwd_lsof			DIR		2			/ 
+kthreadd		2		root	rtd_lsof			DIR		2			/ 
+kthreadd		2		root	txt_lsof			unknown_UNEXISTED		2			/proc/2/exe 

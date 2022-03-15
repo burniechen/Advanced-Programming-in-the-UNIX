@@ -156,14 +156,31 @@ void Info::list_MAPS() {
 void Info::list_FD() {
 	std::filesystem::directory_iterator detail(NAME);
 	for (auto e:detail) {
+		// e: /proc/<pid>/fd/<number>
+		std::string dir = std::filesystem::absolute(e);
+		std::string file = e.path().filename();
+		stat(dir.c_str(), BUF);
+
+		mode_t mode = BUF->st_mode;
+		if ( (mode&S_IRUSR) and (mode&S_IWUSR) )
+			FD = file + "u";
+		else if(mode & S_IRUSR)
+			FD = file + "r";
+		else if (mode & S_IWUSR)
+			FD = file + "w";
+
 		NAME = std::filesystem::read_symlink(e);
-		stat(NAME.c_str(), BUF);
-		NODE = std::to_string(BUF->st_ino);
 		TYPE = get_TYPE(std::filesystem::status(NAME));
 		if (NAME.find("socket:") != std::string::npos)
 			TYPE = "SOCK";
 		if (NAME.find("pipe:") != std::string::npos)
 			TYPE = "PIPE";
+		if (NAME.find("anon_inode:") != std::string::npos)
+			TYPE = "a_inode";
+
+		NODE = std::to_string(BUF->st_ino);
+
+
 		print_ALL();
 	}
 }
