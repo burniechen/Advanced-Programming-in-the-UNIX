@@ -37,9 +37,11 @@ int main() {
 			if (file == "cwd" or file == "root" or file == "exe")
 				all->print_ALL();
 
-			if (file == "fd")
+			if (file == "fd") {
 				if (all->TYPE == "DIR")
 					all->list_FD();
+				else all->print_ALL();
+			}
 
 			if (state != -1 and file == "maps")
 				all->list_MAPS();

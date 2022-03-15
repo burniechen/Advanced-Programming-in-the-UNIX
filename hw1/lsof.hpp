@@ -69,7 +69,7 @@ struct Info : Basic {
 			TYPE = get_TYPE(std::filesystem::status(NAME));
 		}
 		catch (std::filesystem::filesystem_error const& ex) {
-			TYPE = "unknown_start";
+			TYPE = "unknown";
 		}
 		check(file);
 	};
@@ -85,7 +85,7 @@ void Info::check(std::string &file) {
 	stat(NAME.c_str(), BUF);
 	NODE = std::to_string(BUF->st_ino);
 	if (file == "cwd") {
-		FD = "cwd_lsof";
+		FD = "cwd";
 		try {
 			std::filesystem::directory_iterator check(NAME);
 			NAME = std::filesystem::read_symlink(NAME);
@@ -96,7 +96,7 @@ void Info::check(std::string &file) {
 		}
 	}
 	else if (file == "root") {
-		FD = "rtd_lsof";
+		FD = "rtd";
 		try {
 			std::filesystem::directory_iterator check(NAME);
 			NAME = std::filesystem::read_symlink(NAME);
@@ -107,7 +107,7 @@ void Info::check(std::string &file) {
 		}
 	}
 	else if (file == "exe") {
-		FD = "txt_lsof";
+		FD = "txt";
 		try {
 			std::filesystem::is_symlink(std::filesystem::status(NAME));
 		}
@@ -119,7 +119,7 @@ void Info::check(std::string &file) {
 			NAME = std::filesystem::read_symlink(NAME);
 	}
 	else if (file == "fd") {
-		FD = "NOFD_lsof";
+		FD = "NOFD";
 		try {
 			std::filesystem::directory_iterator check(NAME);
 		}
@@ -174,7 +174,7 @@ void Info::list_FD() {
 		if (NAME.find("socket:") != std::string::npos)
 			TYPE = "SOCK";
 		if (NAME.find("pipe:") != std::string::npos)
-			TYPE = "PIPE";
+			TYPE = "FIFO";
 		if (NAME.find("anon_inode:") != std::string::npos)
 			TYPE = "a_inode";
 
@@ -203,7 +203,7 @@ std::string Info::get_TYPE(std::filesystem::file_status s) {
         case std::filesystem::file_type::none: 
 			return "NONE";
         case std::filesystem::file_type::not_found: 
-			return "unknown_UNEXISTED";
+			return "";
         case std::filesystem::file_type::regular: 
 			return "REG";
         case std::filesystem::file_type::directory: 
