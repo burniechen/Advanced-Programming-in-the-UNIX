@@ -142,11 +142,19 @@ void Info::list_MAPS() {
 		std::vector<std::string> v;
 		while (ss >> tmp)
 			v.push_back(tmp);
-		int len = v.size();
-		if (v[len-1][0] != '/')
-			continue;
-		NAME = v[len-1];
-		NODE = v[len-2];
+				int len = v.size();
+		if (v[len-1][0] == '/') {
+			NAME = v[len-1];
+			NODE = v[len-2];
+		}
+		else if (v[len-1] == "(deleted)") {
+			NAME = v[len-2];
+			NODE = v[len-3];
+			FD = "DEL";
+		}
+		else continue;
+
+		TYPE = get_TYPE(std::filesystem::status(NAME));
 
 		print_ALL();
 	}
@@ -179,7 +187,6 @@ void Info::list_FD() {
 			TYPE = "a_inode";
 
 		NODE = std::to_string(BUF->st_ino);
-
 
 		print_ALL();
 	}

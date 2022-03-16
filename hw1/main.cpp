@@ -9,26 +9,32 @@ using namespace std::filesystem;
 Status *buf = new Status;
 const char *proc = "/proc/";
 
-int main() {
+int main(int argc, char* argv[]) {
+	if (argc%2 == 0) {
+		cout << "Arguments Error";
+		return 0;
+	}
+
 	if (stat(proc, buf) == -1)
 		perror("stat");
 
-	vector<string> pids{"1", "2"};
-	/*
-	for (auto e : directory_iterator(proc))
+	vector<Basic*> process;
+	for (auto e : directory_iterator(proc)) {
 		if (e.status().type() == file_type::directory) {
-			string dir = e.path().filename();
-			if (isdigit(dir[0]))
-				pids.push_back(dir);
+			string dir = absolute(e);
+			string file = e.path().filename();
+			if (isdigit(file[0])) {
+				stat(dir.c_str(), buf);
+				Basic *info = new Basic(proc, file, buf->st_uid);
+				process.push_back(info);
+			}
 		}
-		*/
+	}
 
 	printf("COMMAND		PID		USER	FD			TYPE		NODE			NAME\n");
-	for (auto pid:pids) {
-		Basic *info = new Basic(proc, pid, buf->st_uid);
-
-		directory_iterator sub_detail( proc+pid );
-		for (auto e:sub_detail) {
+	for (auto info : process) {
+		string pid = info->PID;
+		for (auto e : directory_iterator(proc + pid)) {
 			string dir = absolute(e);
 			string file = e.path().filename();
 			Info *all = new Info(*info, buf, dir, file);
