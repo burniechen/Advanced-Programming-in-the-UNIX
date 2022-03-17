@@ -7,8 +7,10 @@
 #include <sys/stat.h>
 #include <pwd.h>
 #include <filesystem>
+#include <regex>
 
 typedef struct stat Status;
+std::vector<std::string> ARG;
 
 struct Basic{
 	std::string PATH;
@@ -184,7 +186,8 @@ void Info::list_FD() {
 		if (NAME.find("pipe:") != std::string::npos)
 			TYPE = "FIFO";
 		if (NAME.find("anon_inode:") != std::string::npos)
-			TYPE = "a_inode";
+			TYPE = "unknown";
+			// TYPE = "a_inode";
 
 		NODE = std::to_string(BUF->st_ino);
 
@@ -193,6 +196,43 @@ void Info::list_FD() {
 }
 
 void Info::print_ALL() {
+	std::smatch m;
+	std::string pre = "([a-zA-Z])*(", suf = ")([a-zA-Z])*";
+	std::string target = "";
+
+	// filter command
+	auto it = find(ARG.begin(), ARG.end(), "-c");
+	if (it != ARG.end()) {
+		target = *(it+1);
+		std::regex e(pre + target + suf);
+		if (not std::regex_search(COMMAND, m, e))
+			return;
+	}
+
+	// filter type
+	it = find(ARG.begin(), ARG.end(), "-t");
+	std::vector<std::string> TYPEs{"REG", "CHR",  "DIR",  "FIFO",  "SOCK", "unknown"};
+	if (it != ARG.end()) {
+		target = *(it+1);
+		if (find(TYPEs.begin(), TYPEs.end(), target) == TYPEs.end()) {
+			std::cout << "Invalid TYPE option.";
+			exit(0);
+		}
+			
+		std::regex e(pre + target + suf);
+		if (not std::regex_search(TYPE, m, e))
+			return;
+	}
+
+	// filter filenames
+	it = find(ARG.begin(), ARG.end(), "-f");
+	if (it != ARG.end()) {
+		target = *(it+1);
+		std::regex e(pre + target + suf);
+		if (not std::regex_search(NAME, m, e))
+			return;
+	}
+
 	printf("%s		%s		%s	%s			%s		%s			%s %s\n", 
 		COMMAND.c_str(),
 		PID.c_str(),
