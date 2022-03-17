@@ -6,7 +6,6 @@
 using namespace std;
 using namespace std::filesystem;
 
-Status *buf = new Status;
 const char *proc = "/proc/";
 
 int main(int argc, char* argv[]) {
@@ -34,6 +33,7 @@ int main(int argc, char* argv[]) {
 	}
 
 	printf("COMMAND		PID		USER	FD			TYPE		NODE			NAME\n");
+	vector<string> hw1{"cwd", "root", "exe", "maps", "fd"};
 	for (auto info : process) {
 		string pid = info->PID;
 		directory_iterator detail;
@@ -45,9 +45,9 @@ int main(int argc, char* argv[]) {
 				<< " DIR UNEXISTED!\n";
 			continue;
 		}
-		for (auto e : detail) {
-			string dir = absolute(e);
-			string file = e.path().filename();
+		for (auto e : hw1) {
+			string dir = proc + pid + "/" + e;
+			string file = e;
 
 			Info *all = new Info(*info, buf, dir, file);
 			int state = stat(dir.c_str(), buf);

@@ -19,6 +19,9 @@ struct Basic{
 	long UID;
 	std::string USER;
 
+	Basic() : 
+		PATH(""), COMMAND(""), PID(""), UID(0), USER("") {}
+
 	Basic(std::string path, 
 		std::string pid,
 		int uid) : 
@@ -61,6 +64,11 @@ struct Info : Basic {
 	std::string PERM;
 
 	Info(const Basic &src, 
+		Status *buf) :
+		Basic(src), 
+		BUF(buf), FD(""), TYPE(""), NODE(""), NAME(""), PERM("") {};
+
+	Info(const Basic &src, 
 		Status *buf,
 		std::string &dir,
 		std::string &file) : 
@@ -76,12 +84,28 @@ struct Info : Basic {
 		check(file);
 	};
 
+	bool operator==(const Info &pre) {
+		return (this->COMMAND == pre.COMMAND and
+				this->PID == pre.PID and
+				this->USER == pre.USER and
+				this->FD == pre.FD and
+				this->TYPE == pre.TYPE and
+				this->NODE == pre.NODE and
+				this->NAME == pre.NAME and
+				this->PERM == pre.PERM);
+	}
+
 	void check(std::string &file);
 	void list_MAPS();
 	void list_FD();
 	void print_ALL();
 	std::string get_TYPE(std::filesystem::file_status s);
 };
+
+Status *buf = new Status;
+Basic trash;
+Info pre(trash, buf);
+std::string jump_MAPS = "";
 
 void Info::check(std::string &file) {
 	stat(NAME.c_str(), BUF);
@@ -118,7 +142,7 @@ void Info::check(std::string &file) {
 			PERM = "(Permission denied)";
 		}
 		if (TYPE == "REG")
-			NAME = std::filesystem::read_symlink(NAME);
+			NAME = std::filesystem::read_symlink(NAME), jump_MAPS = NAME;
 	}
 	else if (file == "fd") {
 		FD = "NOFD";
@@ -138,6 +162,7 @@ void Info::list_MAPS() {
 	std::ifstream f;
 	f.open(NAME);
 	std::string target;
+
 	while (getline(f, target)) {
 		std::stringstream ss(target);
 		std::string tmp;
@@ -147,6 +172,7 @@ void Info::list_MAPS() {
 				int len = v.size();
 		if (v[len-1][0] == '/') {
 			NAME = v[len-1];
+			FD = (NAME == jump_MAPS) ? "txt" : "mem";
 			NODE = v[len-2];
 		}
 		else if (v[len-1] == "(deleted)") {
@@ -196,15 +222,20 @@ void Info::list_FD() {
 }
 
 void Info::print_ALL() {
+	if (pre == *this) {
+		pre = *this;
+		return;
+	}
+	pre = *this;
+
 	std::smatch m;
-	std::string pre = "([a-zA-Z])*(", suf = ")([a-zA-Z])*";
 	std::string target = "";
 
 	// filter command
 	auto it = find(ARG.begin(), ARG.end(), "-c");
 	if (it != ARG.end()) {
 		target = *(it+1);
-		std::regex e(pre + target + suf);
+		std::regex e(target);
 		if (not std::regex_search(COMMAND, m, e))
 			return;
 	}
@@ -219,7 +250,7 @@ void Info::print_ALL() {
 			exit(0);
 		}
 			
-		std::regex e(pre + target + suf);
+		std::regex e(target);
 		if (not std::regex_search(TYPE, m, e))
 			return;
 	}
@@ -228,12 +259,12 @@ void Info::print_ALL() {
 	it = find(ARG.begin(), ARG.end(), "-f");
 	if (it != ARG.end()) {
 		target = *(it+1);
-		std::regex e(pre + target + suf);
+		std::regex e(target);
 		if (not std::regex_search(NAME, m, e))
 			return;
 	}
 
-	printf("%s		%s		%s	%s			%s		%s			%s %s\n", 
+	printf("%s		%s		%s	%s			%s		%s			%s %s\n",
 		COMMAND.c_str(),
 		PID.c_str(),
 		USER.c_str(),
