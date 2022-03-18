@@ -1,6 +1,6 @@
 CC = g++ -std=c++17 -Wall
 APP = hw1
-SOURCE = main.cpp
+SOURCE = hw1.cpp
 
 all: main
 
