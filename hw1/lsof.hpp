@@ -197,19 +197,22 @@ void Info::list_FD() {
 		std::string file = e.path().filename();
 		stat(dir.c_str(), BUF);
 
-		mode_t mode = BUF->st_mode;
-		if ( (mode&S_IRUSR) and (mode&S_IWUSR) )
+		std::filesystem::perms p = std::filesystem::symlink_status(dir).permissions();
+		bool owner_read = ( (p & std::filesystem::perms::owner_read) !=  std::filesystem::perms::none );
+		bool owner_write = ( (p & std::filesystem::perms::owner_write) != std::filesystem::perms::none );
+
+		if (owner_read and owner_write)
 			FD = file + "u";
-		else if(mode & S_IRUSR)
+		else if (owner_read)
 			FD = file + "r";
-		else if (mode & S_IWUSR)
+		else if (owner_write)
 			FD = file + "w";
 
 		NAME = std::filesystem::read_symlink(e);
 		TYPE = get_TYPE(std::filesystem::status(NAME));
 		if (NAME.find("socket:") != std::string::npos)
 			TYPE = "SOCK";
-		if (NAME.find("pipe:") != std::string::npos)
+		if (NAME.find("pipe:") != std::string::npos or NAME.find(".fifo") != std::string::npos)
 			TYPE = "FIFO";
 		if (NAME.find("anon_inode:") != std::string::npos)
 			TYPE = "unknown";
