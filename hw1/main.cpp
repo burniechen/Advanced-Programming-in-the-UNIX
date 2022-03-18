@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 #include <filesystem>
 
-#include "lsof.hpp"
+#include "def.hpp"
+#include "fun.hpp"
 
 using namespace std;
 using namespace std::filesystem;
@@ -41,27 +42,23 @@ int main(int argc, char* argv[]) {
 			detail = directory_iterator(proc + pid);
 		}
 		catch (filesystem_error const& ex) {
-			cout << proc + pid
-				<< " DIR UNEXISTED!\n";
 			continue;
 		}
 		for (auto e : hw1) {
 			string dir = proc + pid + "/" + e;
-			string file = e;
-
-			Info *all = new Info(*info, buf, dir, file);
+			Info *all = new Info(*info, buf, dir, e);
 			int state = stat(dir.c_str(), buf);
 
-			if (file == "cwd" or file == "root" or file == "exe")
+			if (e == "cwd" or e == "root" or e == "exe")
 				all->print_ALL();
 
-			if (file == "fd") {
+			if (e == "fd") {
 				if (all->TYPE == "DIR")
 					all->list_FD();
 				else all->print_ALL();
 			}
 
-			if (state != -1 and file == "maps")
+			if (state != -1 and  e == "maps")
 				all->list_MAPS();
 		}
 	}
